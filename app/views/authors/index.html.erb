@@ -1,7 +1,10 @@
-<h1>Autores</h1>
+<div class="container">
+  <h1>Autores</h1>
 
-<ul>
-  <% @authors.each do |author| %>
-    <li><%= link_to(author.full_name, author_path(author.id)) %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @authors.each do |author| %>
+      <li><%= link_to(author.full_name, author_path(author.id)) %></li>
+    <% end %>
+  </ul>
+  <%= link_to "Nuevo", new_author_path, class: "btn btn-primary" %>
+</div>

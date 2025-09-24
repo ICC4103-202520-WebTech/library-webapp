@@ -6,8 +6,13 @@ class AuthorsController < ApplicationController
     @authors = Author.all
   end
 
-  # authors/:id
+  # /authors/:id
   def show
+  end
+
+  # /authors/new 
+  def new
+    @author = Author.new
   end
 
 
