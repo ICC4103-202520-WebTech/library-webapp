@@ -4,6 +4,7 @@ class Author < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :first_name, uniqueness: { scope: :last_name, message: "Ya existe este autor" }
 
   before_validation :strip_name
   before_validation :titleize_name

@@ -3,7 +3,7 @@
 
   <ul>
     <% @authors.each do |author| %>
-      <li><%= link_to(author.full_name, author_path(author.id)) %></li>
+      <li><%= link_to(author.full_name, author_path(author.id)) %> - <%= link_to "Editar", edit_author_path(author) %></li>
     <% end %>
   </ul>
   <%= link_to "Nuevo", new_author_path, class: "btn btn-primary" %>
